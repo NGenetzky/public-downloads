@@ -1,3 +1,36 @@
-
 * annex.backend=MD5E
+
+#
+# largefiles=nothing
+#
+
+# WARNING: Checking mimetype check has bugs, see note below.
+# * annex.largefiles=(mimetype=binary/*)
+# NOTE: (mimeencoding=binary) was only added in very recent git-annex versions,
+# so might be best not to rely on it too heavily.
+# Available in version "7.20190322+git133-g59922f1f4-1~ndall+1"
+# references:
+# - https://github.com/datalad/datalad/issues/3361
+* annex.largefiles=(mimeencoding=binary)
+
+#
+# largefiles=nothing
+#
+
+*.json annex.largefiles=nothing
+
+# internal git repo files
 **/.git* annex.largefiles=nothing
+
+#
+# largefiles=anything
+#
+
+# archive files
+*.tgz annex.largefiles=anything
+*.tar.* annex.largefiles=anything
+*.zip annex.largefiles=anything
+
+*.pdf annex.largefiles=anything
+*.PDF annex.largefiles=anything
+
