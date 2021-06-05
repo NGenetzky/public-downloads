@@ -11,7 +11,11 @@
 # Available in version "7.20190322+git133-g59922f1f4-1~ndall+1"
 # references:
 # - https://github.com/datalad/datalad/issues/3361
-* annex.largefiles=(mimeencoding=binary)
+#
+# WARNING: git-annex: bad annex.largefiles configuration: Parse failure: near "mimeencoding=binary"
+# NOTE: We will disable for now.
+#* annex.largefiles=(mimeencoding=binary)
+* annex.largefiles=(largerthan=500kb)
 
 #
 # largefiles=nothing
